@@ -10,7 +10,7 @@
 
 .switch-label {
     display: inline-block;
-    vertical-align: 130%;
+    vertical-align: 110%;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -27,8 +27,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 4rem;
-  height: 2.5rem;
+  width: 3.5rem;
+  height: 2rem;
 }
 
 /* Hide default HTML checkbox */
@@ -50,8 +50,8 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   left: 6px;
   bottom: 4px;
   background-color: white;
