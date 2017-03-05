@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>D3 graphing</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Median Income By State</h1>
+        <p class="lead">Bar chart that shows the sorted median income in each state. The color represents whether the state is Republican or Democratic-leaning.</p>
+        <div class="switch-wrapper">
+        <p class="switch-label"> Sort by median income</p>
+        <label class="switch">
+          <input id="sortData" type="checkbox">
+          <div class="slider round"></div>
+        </label>
+        </div>
+        <div class="chart">
+            <svg id="chart"></svg>
+        </div>
+    </div>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Median Income</th>
+            <th>Democratic Representatives</th>
+            <th>Republican Representatives</th>
+          </tr>
+        </thead>
+      <tbody id="table-data">
+      </tbody>
+      </table>
+    </div>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="states.js"></script>
+  <script src="bar-chart.js"></script>
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover({
+         placement: 'top',
+         trigger: 'hover'
+      })
+    })
+  </script>
+</body>
+</html>
